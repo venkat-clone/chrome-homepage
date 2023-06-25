@@ -34,8 +34,9 @@ class _SearchState extends State<Search> {
               valueListenable: _query,
               builder: (context, value, _) {
                 return ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: 450),
+                  constraints: BoxConstraints(maxWidth: 400),
                   child: Wrap(
+                    alignment: WrapAlignment.center,
                     children: [
                       SocailIcon(
                         icon: 'youtube.png',
@@ -60,9 +61,19 @@ class _SearchState extends State<Search> {
                       ),
                       SocailIcon(
                         icon: 'upwork.png',
-                        highlight: Colors.white,
+                        highlight: Colors.green,
                         url:
                             'https://www.upwork.com/nx/jobs/search/?q=${_query.value}',
+                      ),
+                      SocailIcon(
+                        icon: 'flutter.png',
+                        highlight: Colors.blue,
+                        url: 'https://pub.dev/packages?q=${_query.value}',
+                      ),
+                      SocailIcon(
+                        icon: 'react.png',
+                        highlight: Colors.lightBlue,
+                        url: 'https://www.npmjs.com/search?q=${_query.value}',
                       ),
                     ],
                   ),

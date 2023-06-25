@@ -13,6 +13,16 @@ class SearchField extends StatefulWidget {
 
 class _SearchFieldState extends State<SearchField> {
   bool _isHovered = false;
+  FocusNode _focusNode = FocusNode();
+
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 1)).then((value) {
+      _focusNode.requestFocus();
+    });
+    super.initState();
+  }
+
   void _handleHover(bool isHovered) {
     setState(() {
       _isHovered = isHovered;
@@ -40,6 +50,7 @@ class _SearchFieldState extends State<SearchField> {
           onEnter: (event) => _handleHover(true),
           onExit: (event) => _handleHover(false),
           child: TextField(
+            focusNode: _focusNode,
             onChanged: widget.onchanged,
             textAlign: TextAlign.center,
             autofocus: true,

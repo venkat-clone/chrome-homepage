@@ -14,6 +14,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width <= 900) {
+      return Scaffold(
+        body: Center(
+          child: Text(
+              'This web page only made for desktop , please open in desktop '),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: background,
       body: Container(
@@ -35,16 +44,42 @@ class _HomePageState extends State<HomePage> {
 
   Widget bookmarks() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15.0),
+      padding: const EdgeInsets.only(top: 15.0, left: 30, right: 30),
       child: Wrap(
         alignment: WrapAlignment.center,
         children: [
-          Bookmark(),
-          Bookmark(),
-          Bookmark(),
-          Bookmark(),
-          Bookmark(),
-          Bookmark(),
+          Bookmark(
+            icon: 'github.png',
+            webDomain: 'github',
+            link: 'https://github.com/venkat-clone',
+          ),
+          Bookmark(
+            icon: 'whatsapp.png',
+            webDomain: 'whatsapp',
+            link: 'https://web.whatsapp.com/',
+          ),
+          Bookmark(
+            icon: 'internshala.png',
+            webDomain: 'internshala Jobs',
+            link:
+                'https://internshala.com/internships/work-from-home-internships/',
+          ),
+          Bookmark(
+            icon: 'linkedin.png',
+            webDomain: 'linkedin',
+            link: 'https://www.linkedin.com/in/lingampallyvenkey/',
+          ),
+          Bookmark(
+            icon: 'figma.png',
+            webDomain: 'Figma',
+            link: 'https://www.figma.com/files/recents-and-sharing',
+          ),
+          Bookmark(
+            icon: 'drive.png',
+            webDomain: 'My Worksamples & Resume',
+            link:
+                'https://drive.google.com/drive/folders/1dCZT6vRNEvGDSovVnLszQq60MueVXGJ-?usp=drive_link',
+          ),
         ],
       ),
     );
