@@ -41,27 +41,28 @@ class _SearchState extends State<Search> {
                         icon: 'youtube.png',
                         highlight: Colors.red,
                         url:
-                            'https://www.youtube.com/results?search_query=$_query',
+                            'https://www.youtube.com/results?search_query=${_query.value}',
                       ),
                       SocailIcon(
                           icon: 'github.png',
                           highlight: Colors.white,
-                          url: 'https://github.com/search?q=$_query'),
+                          url: 'https://github.com/search?q=${_query.value}'),
                       SocailIcon(
                         icon: 'dribble.png',
                         highlight: Colors.pink,
-                        url: 'https://dribbble.com/search/$_query',
+                        url: 'https://dribbble.com/search/${_query.value}',
                       ),
                       SocailIcon(
                         icon: 'linkedin.png',
                         highlight: Colors.blue,
                         url:
-                            'https://www.linkedin.com/search/results/all/?keywords=$_query',
+                            'https://www.linkedin.com/search/results/all/?keywords=${_query.value}',
                       ),
                       SocailIcon(
                         icon: 'upwork.png',
                         highlight: Colors.white,
-                        url: 'https://www.upwork.com/nx/jobs/search/?q=$_query',
+                        url:
+                            'https://www.upwork.com/nx/jobs/search/?q=${_query.value}',
                       ),
                     ],
                   ),
