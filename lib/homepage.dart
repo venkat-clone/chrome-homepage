@@ -1,6 +1,5 @@
 import 'package:chrome_home_page/colors.dart';
 import 'package:flutter/material.dart';
-import 'dart:html' as html;
 import 'Components/bookmark.dart';
 import 'Components/search.dart';
 import 'Components/search_icon.dart';
@@ -23,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: [
             SizedBox(
-              height: 30,
+              height: 15,
             ),
             header(),
             const Search(),
@@ -36,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget bookmarks() {
     return Padding(
-      padding: const EdgeInsets.only(top: 30.0),
+      padding: const EdgeInsets.only(top: 15.0),
       child: Wrap(
         alignment: WrapAlignment.center,
         children: [
