@@ -40120,7 +40120,7 @@ $1(a){this.a.d.sn(0,a)},
 $S:48}
 A.ab1.prototype={
 $3(a,b,c){var s=null,r=this.a.d
-return new A.dB(new A.av(0,450,0,1/0),A.agk(B.fv,A.a([new A.e4("youtube.png",B.qs,"https://www.youtube.com/results?search_query="+r.k(0),s),new A.e4("github.png",B.j,"https://github.com/search?q="+r.k(0),s),new A.e4("dribble.png",B.Fz,"https://dribbble.com/search/"+r.k(0),s),new A.e4("linkedin.png",B.dm,"https://www.linkedin.com/search/results/all/?keywords="+r.k(0),s),new A.e4("upwork.png",B.j,"https://www.upwork.com/nx/jobs/search/?q="+r.k(0),s)],t.F)),s)},
+return new A.dB(new A.av(0,450,0,1/0),A.agk(B.fv,A.a([new A.e4("youtube.png",B.qs,"https://www.youtube.com/results?search_query="+A.h(r.a),s),new A.e4("github.png",B.j,"https://github.com/search?q="+A.h(r.a),s),new A.e4("dribble.png",B.Fz,"https://dribbble.com/search/"+A.h(r.a),s),new A.e4("linkedin.png",B.dm,"https://www.linkedin.com/search/results/all/?keywords="+A.h(r.a),s),new A.e4("upwork.png",B.j,"https://www.upwork.com/nx/jobs/search/?q="+A.h(r.a),s)],t.F)),s)},
 $S:344}
 A.wV.prototype={
 aj(){return new A.OY(B.k)}}
@@ -40128,7 +40128,7 @@ A.OY.prototype={
 Ju(a){this.ao(new A.aaX(this,a))},
 L(a){var s=this,r=null,q=A.ow(30),p=A.a([s.d?new A.co(5,B.aF,A.ak(102,1,195,141),B.f,5):new A.co(3,B.aF,A.ak(51,1,195,141),B.f,3)],t.sq),o=s.a.c,n=A.a(["hello","bye"],t.s),m=A.ak(51,1,195,141)
 m=A.ajf(r,new A.fJ(4,A.ow(30),new A.bM(B.bj,1,B.Z,-1)),new A.av(0,400,0,1/0),B.Az,r,r,r,r,!0,r,r,r,r,r,B.ea,!0,r,r,r,B.bj,r,r,r,r,r,r,B.Mb,"Search Anything",r,m,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r)
-return new A.dn(B.Ao,A.ky(r,A.fH(new A.xD(m,B.JW,B.L7,B.iD,!0,B.IW,B.IX,o,new A.aaY(),!0,n,r),B.aP,new A.aaZ(s),new A.ab_(s),r),B.u,r,r,new A.dh(r,r,r,q,p,r,B.aG),r,r,r,r,r,r,r),r)}}
+return new A.dn(B.Ap,A.ky(r,A.fH(new A.xD(m,B.JW,B.L7,B.iD,!0,B.IW,B.IX,o,new A.aaY(),!0,n,r),B.aP,new A.aaZ(s),new A.ab_(s),r),B.u,r,r,new A.dh(r,r,r,q,p,r,B.aG),r,r,r,r,r,r,r),r)}}
 A.aaX.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -40161,7 +40161,7 @@ A.uL.prototype={
 aj(){return new A.Mb(B.k)}}
 A.Mb.prototype={
 L(a){var s,r,q=null,p=t.F
-p=A.a([A.jG(q,30,q),this.aar(),B.HH,new A.dn(B.Ap,A.agk(B.P1,A.a([new A.hX(q),new A.hX(q),new A.hX(q),new A.hX(q),new A.hX(q),new A.hX(q)],p)),q)],p)
+p=A.a([A.jG(q,15,q),this.aar(),B.HH,new A.dn(B.Ao,A.agk(B.P1,A.a([new A.hX(q),new A.hX(q),new A.hX(q),new A.hX(q),new A.hX(q),new A.hX(q)],p)),q)],p)
 s=A.az([null,0],t.LO,t.S)
 r=!0
 r=r?B.wY:q
@@ -76473,8 +76473,8 @@ B.hf=new A.aN(75e3)
 B.Am=new A.aN(-38e3)
 B.b0=new A.aO(0,0,0,0)
 B.An=new A.aO(0,12,0,12)
-B.Ao=new A.aO(0,18,0,0)
-B.Ap=new A.aO(0,30,0,0)
+B.Ao=new A.aO(0,15,0,0)
+B.Ap=new A.aO(0,18,0,0)
 B.Aq=new A.aO(0,3,0,3)
 B.Ar=new A.aO(0,8,0,8)
 B.kC=new A.aO(12,12,12,12)
