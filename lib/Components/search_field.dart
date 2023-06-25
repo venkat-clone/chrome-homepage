@@ -50,13 +50,16 @@ class _SearchFieldState extends State<SearchField> {
           onEnter: (event) => _handleHover(true),
           onExit: (event) => _handleHover(false),
           child: TextField(
+            autocorrect: false,
             focusNode: _focusNode,
             onChanged: widget.onchanged,
             textAlign: TextAlign.center,
             autofocus: true,
+            enableSuggestions: false,
             onSubmitted: (value) {
               launchURL('https://www.google.com/search?q=$value');
             },
+            keyboardType: TextInputType.visiblePassword,
             style: const TextStyle(
                 color: primary,
                 fontSize: 20,
@@ -65,7 +68,7 @@ class _SearchFieldState extends State<SearchField> {
                 shadows: [
                   BoxShadow(color: primary, blurRadius: 3, spreadRadius: 3)
                 ]),
-            autofillHints: ['hello', 'bye'],
+            // autofillHints: ['hello', 'bye'],
             decoration: InputDecoration(
               constraints: BoxConstraints(maxWidth: 400),
               hintText: 'Search Anything',
