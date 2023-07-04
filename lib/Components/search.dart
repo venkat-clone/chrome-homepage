@@ -41,39 +41,44 @@ class _SearchState extends State<Search> {
                       SocailIcon(
                         icon: 'youtube.png',
                         highlight: Colors.red,
-                        url:
-                            'https://www.youtube.com/results?search_query=${_query.value}',
+                        url: 'https://www.youtube.com',
+                        query: '/results?search_query=${_query.value}',
                       ),
                       SocailIcon(
-                          icon: 'github.png',
-                          highlight: Colors.white,
-                          url: 'https://github.com/search?q=${_query.value}'),
+                        icon: 'github.png',
+                        highlight: Colors.white,
+                        url: 'https://github.com',
+                        query: '/search?q=${_query.value}',
+                      ),
                       SocailIcon(
                         icon: 'dribble.png',
                         highlight: Colors.pink,
-                        url: 'https://dribbble.com/search/${_query.value}',
+                        url: 'https://dribbble.com/search',
+                        query: '/${_query.value}',
                       ),
                       SocailIcon(
                         icon: 'linkedin.png',
                         highlight: Colors.blue,
-                        url:
-                            'https://www.linkedin.com/search/results/all/?keywords=${_query.value}',
+                        url: 'https://www.linkedin.com/search',
+                        query: '/results/all/?keywords=${_query.value}',
                       ),
                       SocailIcon(
                         icon: 'upwork.png',
                         highlight: Colors.green,
-                        url:
-                            'https://www.upwork.com/nx/jobs/search/?q=${_query.value}',
+                        url: 'https://www.upwork.com/nx/jobs',
+                        query: '/search/?q=${_query.value}',
                       ),
                       SocailIcon(
                         icon: 'flutter.png',
                         highlight: Colors.blue,
-                        url: 'https://pub.dev/packages?q=${_query.value}',
+                        url: 'https://pub.dev/packages',
+                        query: '?q=${_query.value}',
                       ),
                       SocailIcon(
                         icon: 'react.png',
                         highlight: Colors.lightBlue,
-                        url: 'https://www.npmjs.com/search?q=${_query.value}',
+                        url: 'https://www.npmjs.com/search',
+                        query: '?q=${_query.value}',
                       ),
                     ],
                   ),

@@ -1,9 +1,11 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 
 import 'package:chrome_home_page/Components/search_icon.dart';
 import 'package:chrome_home_page/colors.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class Bookmark extends StatefulWidget {
   String icon;
   String webDomain;

@@ -7,12 +7,13 @@ class SocailIcon extends StatefulWidget {
   String icon = '';
   Color highlight = white;
   String url = '';
-  SocailIcon({
-    super.key,
-    required this.icon,
-    required this.highlight,
-    required this.url,
-  });
+  String query = '';
+  SocailIcon(
+      {super.key,
+      required this.icon,
+      required this.highlight,
+      required this.url,
+      this.query = ''});
 
   @override
   State<SocailIcon> createState() => _SocailIconState();
@@ -21,13 +22,21 @@ class SocailIcon extends StatefulWidget {
 class _SocailIconState extends State<SocailIcon> {
   bool _isHovered = false;
 
+  openLink() {
+    if (widget.query.endsWith('=')) {
+      launchURL(widget.url);
+    } else {
+      launchURL(widget.url + widget.query);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: InkWell(
         onHover: _handleHover,
-        onTap: () => launchURL(widget.url),
+        onTap: openLink,
         child: AnimatedContainer(
           duration: Duration(milliseconds: 500),
           width: 50,
