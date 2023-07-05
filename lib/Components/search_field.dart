@@ -50,6 +50,7 @@ class _SearchFieldState extends State<SearchField> {
           onEnter: (event) => _handleHover(true),
           onExit: (event) => _handleHover(false),
           child: TextField(
+            restorationId: '',
             autocorrect: false,
             focusNode: _focusNode,
             onChanged: widget.onchanged,

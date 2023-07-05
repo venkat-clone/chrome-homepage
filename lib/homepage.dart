@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     if (MediaQuery.of(context).size.width <= 900) {
-      return Scaffold(
+      return const Scaffold(
         body: Center(
           child: Text(
               'This web page only made for desktop , please open in desktop '),
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                   color: primary,
                   fontSize: 40,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w500,
                   letterSpacing: 3,
                   shadows: [
                     BoxShadow(color: primary, blurRadius: 3, spreadRadius: 3)

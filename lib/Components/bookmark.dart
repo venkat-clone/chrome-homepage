@@ -79,7 +79,7 @@ class BookmarkState extends State<Bookmark> {
                           widget.webDomain,
                           style: const TextStyle(
                               color: shade,
-                              fontWeight: FontWeight.w900,
+                              fontWeight: FontWeight.normal,
                               fontSize: 20),
                         ),
                       ],
@@ -93,7 +93,7 @@ class BookmarkState extends State<Bookmark> {
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                             color: shade,
-                            fontWeight: FontWeight.w900,
+                            fontWeight: FontWeight.normal,
                             fontSize: 16),
                       ),
                     )

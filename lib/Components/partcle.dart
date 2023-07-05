@@ -55,21 +55,21 @@ class _ParticlesScreenState extends State<ParticlesScreen>
     particles.clear();
     final random = Random();
 
-    for (int i = 0; i < 250; i++) {
+    for (int i = 0; i < 400; i++) {
       final x = random.nextDouble() * _size.width;
       final y = random.nextDouble() * _size.height;
-      final vx = x % 3 == 2 ? -1 : x % 3;
-      final vy = y % 3 == 2 ? -1 : y % 3;
+      final vx = (x % 3) * (x % 2 != 0 ? -1 : 1);
+      final vy = (y % 3) * (y % 2 != 0 ? -1 : 1);
       final position = Offset(x, y);
       final paint = Paint()..color = Colors.blue;
       particles.add(Particle(
-          position: position, paint: paint, velocity: Offset(vx / 5, vy / 5)));
+          position: position, paint: paint, velocity: Offset(vx / 3, vy / 3)));
     }
   }
 
   void moveParticles() {
     particles.forEach((particle) {
-      particle.position += particle.velocity * 3;
+      particle.position += particle.velocity * 5;
       if (mousePosition.isFinite) {
         particle.position += particle.velocity;
       }
@@ -90,7 +90,10 @@ class _ParticlesScreenState extends State<ParticlesScreen>
       key: _layoutKey,
       builder: (BuildContext context, BoxConstraints constraints) {
         if (_size == Size(400, 400)) {
-          _size = Size(constraints.maxWidth, constraints.maxHeight);
+          final screenSize = MediaQuery.of(context).size;
+          _size = Size(screenSize.width - 50, screenSize.height - 100);
+
+          // _size = Size(constraints.maxWidth, constraints.maxHeight);
           generateParticles();
         }
         return MouseRegion(
@@ -116,7 +119,7 @@ class _ParticlesScreenState extends State<ParticlesScreen>
 class ParticlesPainter extends CustomPainter {
   final List<Particle> particles;
   final Offset mousePoint;
-  final Paint linePaint = Paint()..color = Colors.blue.withOpacity(0.2);
+  final Paint linePaint = Paint()..color = Colors.blue.withOpacity(0.15);
   final Paint mousePaint = Paint()..color = primary.withOpacity(0.2);
 
   ParticlesPainter({required this.particles, required this.mousePoint});
@@ -148,14 +151,14 @@ class ParticlesPainter extends CustomPainter {
           final dx = destinationPosition.dx - sourcePosition.dx;
           final dy = destinationPosition.dy - sourcePosition.dy;
           final distance = sqrt(dx * dx + dy * dy);
-          if (distance >= 100) {
+          if (distance >= 130) {
             return;
           }
 
           // Draw path between particles
           // canvas.drawLine(sourcePosition, destinationPosition, linePaint);
 
-          if (random.nextDouble() < 0.2) {
+          if (random.nextDouble() < 0.25) {
             canvas.drawLine(sourcePosition, destinationPosition, linePaint);
           }
         }
