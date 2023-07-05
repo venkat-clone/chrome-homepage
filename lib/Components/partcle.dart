@@ -55,7 +55,7 @@ class _ParticlesScreenState extends State<ParticlesScreen>
     particles.clear();
     final random = Random();
 
-    for (int i = 0; i < 400; i++) {
+    for (int i = 0; i < 350; i++) {
       final x = random.nextDouble() * _size.width;
       final y = random.nextDouble() * _size.height;
       final vx = (x % 3) * (x % 2 != 0 ? -1 : 1);
@@ -128,7 +128,7 @@ class ParticlesPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Draw particles
     particles.forEach((particle) {
-      canvas.drawCircle(particle.position, 5, particle.paint);
+      canvas.drawCircle(particle.position, 3, particle.paint);
     });
 
     // Draw random paths between particles
@@ -151,14 +151,14 @@ class ParticlesPainter extends CustomPainter {
           final dx = destinationPosition.dx - sourcePosition.dx;
           final dy = destinationPosition.dy - sourcePosition.dy;
           final distance = sqrt(dx * dx + dy * dy);
-          if (distance >= 130) {
+          if (distance >= 100) {
             return;
           }
 
           // Draw path between particles
           // canvas.drawLine(sourcePosition, destinationPosition, linePaint);
 
-          if (random.nextDouble() < 0.25) {
+          if (random.nextDouble() < 0.2) {
             canvas.drawLine(sourcePosition, destinationPosition, linePaint);
           }
         }

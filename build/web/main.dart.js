@@ -37015,7 +37015,7 @@ t.Qv.a(s)
 if(s!=null)this.ai(new A.a72(this,s))},
 P7(){var s,r,q,p,o,n,m,l,k=this.f
 B.b.a5(k)
-for(s=0;s<400;++s){r=B.fN.Ck()*this.r.a
+for(s=0;s<350;++s){r=B.fN.Ck()*this.r.a
 q=B.fN.Ck()*this.r.b
 p=B.d.cG(r,3)
 o=B.d.cG(r,2)!==0?-1:1
@@ -37080,7 +37080,7 @@ B.b.Z(s,new A.Yi(a))
 B.b.Z(s,new A.Yj(this,this.c,B.fN,a))},
 ed(a){return this.b!==a.b}}
 A.Yi.prototype={
-$1(a){this.a.hz(a.a,5,a.b)},
+$1(a){this.a.hz(a.a,3,a.b)},
 $S:53}
 A.Yj.prototype={
 $1(a){var s=this,r=a.a,q=s.b,p=q.a-r.a,o=q.b-r.b,n=Math.sqrt(p*p+o*o),m=s.a,l=s.d
@@ -37094,8 +37094,8 @@ if(o.b!==a){s=a.a
 r=o.c
 q=s.a-r.a
 p=s.b-r.b
-if(Math.sqrt(q*q+p*p)>=130)return
-if(o.d.Ck()<0.25)o.e.l5(r,s,o.a.d)}},
+if(Math.sqrt(q*q+p*p)>=100)return
+if(o.d.Ck()<0.2)o.e.l5(r,s,o.a.d)}},
 $S:53}
 A.Pd.prototype={
 l(){var s=this,r=s.bG$
